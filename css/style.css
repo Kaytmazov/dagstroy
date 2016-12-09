@@ -1,0 +1,1542 @@
+body {
+	min-width: 960px;
+	font-size: 13px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	text-align: center;
+	color: #000000;
+	background-color: #ffffff;
+	cursor: default;
+	outline: none;
+}
+
+/* ====================== Общие стили ====================== */
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.container {
+	width: 940px;
+	margin: 0 auto;
+	padding: 12px 10px;
+}
+
+h2 {
+	margin-bottom: 15px;
+	font-size: 15px;
+	line-height: 20px;
+	text-transform: uppercase;
+    color: #226093;
+}
+
+.btn {
+	display: inline-block;
+	position: relative;
+	padding: 0 24px;
+	vertical-align: middle;
+	text-decoration: none;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.btn:before,
+.btn:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 6px;
+	width: 28px;
+	height: 28px;
+	background: #e56d6f;
+	border: 2px solid #fff;
+	z-index: 1;
+}
+
+.btn:before {
+	left: 8px;
+	background: linear-gradient(130deg, #e56d6f, #cd3436);
+	transform: rotate(45deg);
+}
+
+.btn:after {
+	right: 8px;
+	background: linear-gradient(-130deg, #e56d6f, #cd3436);
+	transform: rotate(-45deg);
+}
+
+.btn-inner {
+	position: relative;
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 5em;
+	color: #fff;
+	text-transform: uppercase;
+	background: linear-gradient(180deg, #e56d6f, #cd3436);
+	border: solid #fff;
+	border-width: 2px 0;
+	z-index: 2;
+}
+
+.btn:hover .btn-inner {
+	background: linear-gradient(180deg, #F37476, #E03639);
+}
+
+.btn:hover::before {
+	background: linear-gradient(130deg, #F37476, #E03639);
+}
+
+.btn:hover::after {
+	background: linear-gradient(-130deg, #F37476, #E03639);
+}
+
+.list {
+	margin: 0;
+	padding: 0;
+	list-style: inside url(../img/icons/list-icon.svg);
+}
+
+.list li {
+	margin-bottom: 10px;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: left;
+}
+
+nav ul li {
+	display: inline-block;
+	padding: 0 34px;
+}
+
+nav li:first-child {
+	padding-left: 0;
+}
+
+nav li:last-child {
+	padding-right: 0;
+}
+
+nav a {
+	font-size: 12px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+.breadcrumbs {
+	margin: 10px 0;
+	padding: 0;
+	list-style: none;
+	text-align: left;
+    font-size: 12px;
+}
+
+.breadcrumbs li {
+	display: inline;
+	position: relative;
+	padding-right: 20px;
+}
+
+.breadcrumbs .current {
+    color: #979797;
+}
+
+.breadcrumbs li a::after {
+	content: '';
+	position: absolute;
+	top: 4px;
+	right: 9px;
+	width: 5px;
+	height: 7px;
+	background: url(../img/icons/breadcrumbs-icon.svg) no-repeat;
+}
+
+.breadcrumbs a {
+	color: #226093;
+	text-decoration: none;
+}
+
+/* ====================== Header ====================== */
+header {
+	min-height: 54px;
+}
+
+.logo {
+	float: left;
+	width: 225px;
+	height: 43px;
+}
+
+.feedback {
+	padding-top: 5px;
+	float: right;
+	text-align: right;
+}
+
+.feedback .icon-tel {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-right: 5px;
+	background: url(../img/icons/tel.png) no-repeat center center;
+	vertical-align: middle;
+}
+
+.feedback .phone {
+	margin: 0;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 19px;
+	vertical-align: middle;
+}
+
+.feedback .callback {
+	font-weight: normal;
+	font-size: 11px;
+	line-height: 11px;
+	color: #933e41;
+	text-decoration-style: dashed;
+}
+
+/* ====================== Верхнее меню ====================== */
+.navbar-top {
+	min-height: 30px;
+	background: linear-gradient(to bottom, #306396, #04376a);
+}
+
+/* ====================== Слайдер ====================== */
+.slider {
+	position: relative;
+	min-height: 535px;
+	margin-bottom: 90px;
+	background: #49484d url('../img/slider-bg.jpg') no-repeat center top;
+	background-size: cover;
+	border-bottom: 1px solid #a5a5a7;
+}
+
+.slider h1 {
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.slider .advantages {
+	position: absolute;
+	bottom: -71px;
+	left: 50%;
+	margin-left: -256px;
+	color: #ffffff;
+}
+
+.slider .advantages::before, 
+.slider .advantages::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 21px;
+	width: 98px;
+	height: 98px;
+	border: solid #afb0b2;
+	z-index: 1;
+}
+
+.slider .advantages::before {
+	left: -51px;
+	background: linear-gradient(130deg, #4c71a5, #264a7e);
+	border-width: 3px 0 0 3px;
+	transform: rotate(45deg);
+}
+
+.slider .advantages::after {
+	right: -51px;
+	background: linear-gradient(-130deg, #4c71a5, #264a7e);
+	transform: rotate(-45deg);
+	border-width: 3px 3px 0 0;
+}
+
+.advantages-inner {
+	position: relative;
+	height: 140px;
+	background: linear-gradient(180deg, #4c71a5, #264a7e);
+	border-top: 3px solid #afb0b2;
+	z-index: 2;
+}
+
+.slider .advantages h2 {
+	color: #ffffff;
+}
+
+.slider .advantages p {
+	color: #000000;
+}
+
+.advantages .features {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.advantages .features .item {
+	float: left;
+	width: 140px;
+	margin-right: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/* ====================== Жилой комплекс "Центральный" ====================== */
+.info {
+	margin-bottom: 30px;
+}
+
+.info .house {
+	float: left;
+	width: 250px;
+}
+
+.info .description {
+	margin-bottom: 40px;
+}
+
+.info .text {
+	margin-left: 270px;
+	text-align: left;
+}
+
+.info .text h3 {
+	color: #1b5f8e;
+}
+
+/* ====================== Подобрать квартиру ====================== */
+.select {
+	position: relative;
+	margin-bottom: 40px;
+	background: #42659B;
+	color: #ffffff;
+}
+
+.select::before, 
+.select::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 6px;
+}
+
+.select::before {
+	top: -6px;
+	background: linear-gradient(-45deg, #4a6fa3 4px, transparent 0), linear-gradient(45deg, #4a6fa3 4px, transparent 0) repeat-x;
+	background-size: 6px 6px;
+}
+
+.select::after {
+	bottom: 0px;
+	background: linear-gradient(-45deg, #ffffff 4px, transparent 0), linear-gradient(45deg, #ffffff 4px, transparent 0) repeat-x;
+	background-size: 6px 6px;
+}
+
+.select .container {
+	background: url(../img/select-bg.jpg) top center;
+	background-size: cover;
+}
+
+.select p {
+	padding: 20px 50px;
+	font-style: italic;
+	line-height: 2em;
+}
+
+.select .btn {
+	margin-bottom: 50px;
+}
+
+.select .btn:before {
+	background: linear-gradient(130deg, #4f73a7, #11366b);
+}
+
+.select .btn:after {
+	background: linear-gradient(-130deg, #4f73a7, #11366b);
+}
+
+.select .btn-inner {
+	background: linear-gradient(180deg, #4f73a7, #11366b);
+}
+
+.select .btn:hover::before {
+	background: linear-gradient(130deg, #5780BC, #154487);
+}
+
+.select .btn:hover::after {
+	background: linear-gradient(-130deg, #5780BC, #154487);
+}
+
+.select .btn:hover .btn-inner {
+	background: linear-gradient(180deg, #5780BC, #154487);
+}
+
+
+/* ====================== Жилой комплекс "Центральный" - 2 ====================== */
+.info-2 .house {
+	float: right;
+}
+
+.info-2 .text {
+	margin-left: 0;
+	margin-right: 270px;
+}
+
+/* ====================== Фотогалерея ====================== */
+.gallery {
+	position: relative;
+	min-height: 390px;
+	margin-bottom: 40px;
+	background-color: #efefef;
+}
+
+.gallery::before, 
+.gallery::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 6px;
+}
+
+.gallery::before {
+	top: -6px;
+	background: linear-gradient(-45deg, #efefef 4px, transparent 0), linear-gradient(45deg, #efefef 4px, transparent 0) repeat-x;
+	background-size: 6px 6px;
+}
+
+.gallery::after {
+	bottom: 0px;
+	background: linear-gradient(-45deg, #ffffff 4px, transparent 0), linear-gradient(45deg, #ffffff 4px, transparent 0) repeat-x;
+	background-size: 6px 6px;
+}
+
+.gallery h2 {
+	color: #990000;
+}
+
+.gallery section {
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.gallery .photos {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.gallery .photo {
+	display: inline-block;
+	text-align: center;
+	width: 169px;
+	height: 125px;
+	margin-right: 40px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.gallery .photo:nth-child(3n) {
+	margin-right: 0;
+}
+
+.gallery .btn-gallery {
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	width: 18px;
+	height: 30px;
+	background: url(../img/icons/btn-gallery.png) no-repeat center;
+	border: none;
+	cursor: pointer;
+}
+
+.gallery .gallery-prev {
+	left: 30px;
+}
+
+.gallery .gallery-next {
+	right: 30px;
+	transform: rotate(180deg);
+}
+
+.gallery .btn:before,
+.gallery .btn:after, 
+.gallery .btn-inner {
+	border-color: #c9d1d3;
+}
+
+/* ====================== Расположение и инфраструктура ====================== */
+.location {
+	margin-bottom: 30px;
+}
+
+.location section {
+	text-align: left;
+}
+
+.location .left {
+	float: left;
+	width: 65%;
+}
+
+.location .right {
+	float: right;
+}
+
+/* ====================== Карта ====================== */
+.map {
+	min-height: 350px;
+	background: #D4E5CE;
+}
+
+.map .container {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+div#yandex-map {
+	width: 100%;
+	height: 400px;
+}
+
+
+/*************************************************************************************************************
+*                                                                                                            *
+*                                     Страница - "Выбор квартиры"                                            *
+*                                                                                                            *
+*************************************************************************************************************/
+
+/* ====================== Контент ====================== */
+.select-page h2 {
+    margin: 45px 0;
+}
+
+.select-page .choose-section {
+    margin: 0 0 50px;
+}
+
+.select-page .left {
+    float: left;
+}
+
+.select-page .right {
+    float: right;
+}
+
+.select-page .choose {
+    position: relative;
+    width: 450px;
+    height: 353px;
+}
+
+.select-page .choose svg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+.select-page .choose-section .title {
+    color: #b4b4b4;
+}
+
+.select-page .choose-section .title span {
+    text-transform: uppercase;
+}
+
+.select-page .choose:hover + .title {
+    color: #4c4c4c;
+}
+
+.select-page .choose:hover + .title span {
+    color: red;
+}
+
+.select-page .svg-hover {
+	opacity: 0;
+	cursor: pointer;
+	transition-duration: 0.3s;
+}
+
+.select-page .svg-hover:hover {
+	opacity: 1;
+}
+
+.select-page .svg-hover .red-backlight {
+	fill: rgba(255, 0, 0, 0.5);
+}
+
+.select-page .svg-hover .orange-backlight {
+	fill: rgba(207, 98, 0, 0.5);
+}
+
+.select-page .svg-hover .green-backlight {
+	fill: rgba(0, 133, 62, 0.5);
+}
+
+.select-page .svg-hover circle {
+	stroke: #ffffff;
+	stroke-width: 2px;
+	fill: none;
+}
+
+.select-page .svg-hover text {
+	font-size: 26px;
+	fill: #ffffff;
+}
+
+/* =========================== Выбор этажа =========================== */
+.plan > div {
+    float: left;
+    width: 355px;
+    margin-right: 20px;
+    text-align: left;
+}
+.plan > div.choose-floor {
+    width: 185px;
+}
+
+.plan > div:last-child {
+    margin-right: 0;
+}
+
+.plan .title {
+    font-size: 14px;
+    color: #4c4c4c;
+}
+
+.plan .choose-floor ul {
+    margin: 0;
+    padding: 0;
+}
+
+.plan .choose-floor li {
+    display: inline-block;
+    padding: 20px 5px;
+    text-align: center;
+}
+
+.plan .choose-floor li.active a, 
+.plan .choose-floor li:hover a{
+    color: #ffffff;
+    background-color: #d94345;
+    border-radius: 50%;
+}
+
+.plan .choose-floor a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #737373;
+    border-radius: 50%;
+    transition: .1s linear all;
+}
+
+/* =========================== Планировка этажа =========================== */
+
+.floor-plan .house {
+	display: none;
+}
+
+.floor-plan .floors  {
+	position: relative;
+	display: none;
+}
+
+.floor-plan .show {
+	display: inline-block;
+}
+
+.floor-plan .locator {
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	background: url(../img/icons/locator.png) no-repeat center center;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+/* ====== Дом "c-a" ====== */
+
+.floor-plan .left-house-a .floors .flat-1 {
+	top: 60px;
+	left: 25px;
+}
+
+.floor-plan .left-house-a .floors .flat-1:hover {
+	top: 0;
+	left: 0;
+	width: 130px;
+	height: 270px;
+	background: url(../img/selection/apartment-layout/c-a/a1-1.png);
+}
+
+.floor-plan .left-house-a .floors .flat-2 {
+	top: 60px;
+	right: 30px;
+}
+
+.floor-plan .left-house-a .floors .flat-2:hover {
+	top: 0;
+	right: 13px;
+	width: 112px;
+	height: 256px;
+	background: url(../img/selection/apartment-layout/c-a/a2-2.png);
+}
+
+.floor-plan .left-house-a .floors .flat-3 {
+	bottom: 60px;
+	right: 125px;
+}
+
+.floor-plan .left-house-a .floors .flat-3:hover {
+	bottom: 0;
+	right: 65px;
+	width: 112px;
+	height: 148px;
+	background: url(../img/selection/apartment-layout/c-a/a3-3.png);
+}
+
+.floor-plan .left-house-a .floors .flat-4 {
+	bottom: 60px;
+	left: 122px;
+}
+
+.floor-plan .left-house-a .floors .flat-4:hover {
+	bottom: 5px;
+	left: 63px;
+	width: 106px;
+	height: 146px;
+	background: url(../img/selection/apartment-layout/c-a/a4-4.png);
+}
+
+/* 4 этаж - Дом "c-a" */
+.floor-plan .left-house-a .floor-4 .flat-1 {
+	top: 60px;
+	left: 40px;
+}
+
+.floor-plan .left-house-a .floor-4 .flat-1:hover {
+	top: 0;
+	left: 0;
+	width: 122px;
+	height: 173px;
+	background: url(../img/selection/apartment-layout/c-a/a-4-11.png);
+}
+
+.floor-plan .left-house-a .floor-4 .flat-2 {
+	top: 60px;
+	right: 40px;
+}
+
+.floor-plan .left-house-a .floor-4 .flat-2:hover {
+	top: 0;
+	right: 0;
+	width: 122px;
+	height: 173px;
+	background: url(../img/selection/apartment-layout/c-a/a-4-12.png);
+}
+
+/* ====== Дом "c-b" ====== */
+
+.floor-plan .left-house-b .floors .flat-1 {
+	top: 37px;
+	left: 42px;
+}
+
+.floor-plan .left-house-b .floors .flat-1:hover {
+	top: 12px;
+	left: 0;
+	width: 97px;
+	height: 149px;
+	background: url(../img/selection/apartment-layout/c-b/b1-1.png);
+}
+
+.floor-plan .left-house-b .floors .flat-2 {
+	top: 30px;
+	left: 168px;
+}
+
+.floor-plan .left-house-b .floors .flat-2:hover {
+	top: 14px;
+	left: 130px;
+	width: 97px;
+	height: 65px;
+	background: url(../img/selection/apartment-layout/c-b/b2-2.png);
+}
+
+.floor-plan .left-house-b .floors .flat-3 {
+	bottom: 25px;
+	right: 55px;
+}
+
+.floor-plan .left-house-b .floors .flat-3:hover {
+	bottom: 2px;
+	right: 0;
+	width: 126px;
+	height: 98px;
+	background: url(../img/selection/apartment-layout/c-b/b3-3.png);
+}
+
+.floor-plan .left-house-b .floors .flat-4 {
+	bottom: 27px;
+	right: 165px;
+}
+
+.floor-plan .left-house-b .floors .flat-4:hover {
+	bottom: 5px;
+	right: 125px;
+	width: 94px;
+	height: 79px;
+	background: url(../img/selection/apartment-layout/c-b/b4-4.png);
+}
+
+.floor-plan .left-house-b .floors .flat-5 {
+	bottom: 25px;
+	left: 72px;
+}
+
+.floor-plan .left-house-b .floors .flat-5:hover {
+	bottom: 5px;
+	left: 37px;
+	width: 96px;
+	height: 78px;
+	background: url(../img/selection/apartment-layout/c-b/b5-5.png);
+}
+
+/* 4 этаж - Дом "c-b" */
+.floor-plan .left-house-b .floor-4 .flat-1 {
+	top: 40px;
+	left: 40px;
+}
+
+.floor-plan .left-house-b .floor-4 .flat-1:hover {
+	top: 12px;
+	left: 0;
+	width: 98px;
+	height: 99px;
+	background: url(../img/selection/apartment-layout/c-b/b-4-1-1.png);
+}
+
+.floor-plan .left-house-b .floor-4 .flat-2 {
+	top: 35px;
+	right: 165px;
+}
+
+.floor-plan .left-house-b .floor-4 .flat-2:hover {
+	top: 15px;
+	right: 125px;
+	width: 96px;
+	height: 65px;
+	background: url(../img/selection/apartment-layout/c-b/b-4-2-2.png);
+}
+
+/* ====== Дом "c-g" ====== */
+
+.floor-plan .left-house-g .floors .flat-1 {
+	top: 60px;
+	left: 40px;
+}
+
+.floor-plan .left-house-g .floors .flat-1:hover {
+	top: 0;
+	left: 10px;
+	width: 127px;
+	height: 269px;
+	background: url(../img/selection/apartment-layout/c-g/g1-1.png);
+}
+
+.floor-plan .left-house-g .floors .flat-2 {
+	top: 60px;
+	right: 25px;
+}
+
+.floor-plan .left-house-g .floors .flat-2:hover {
+	top: 0;
+	right: 0;
+	width: 127px;
+	height: 269px;
+	background: url(../img/selection/apartment-layout/c-g/g2-2.png);
+}
+
+.floor-plan .left-house-g .floors .flat-3 {
+	bottom: 60px;
+	right: 117px;
+}
+
+.floor-plan .left-house-g .floors .flat-3:hover {
+	bottom: 0;
+	right: 60px;
+	width: 112px;
+	height: 145px;
+	background: url(../img/selection/apartment-layout/c-g/g3-3.png);
+}
+
+.floor-plan .left-house-g .floors .flat-4 {
+	bottom: 60px;
+	left: 133px;
+}
+
+.floor-plan .left-house-g .floors .flat-4:hover {
+	bottom: 0;
+	left: 75px;
+	width: 111px;
+	height: 149px;
+	background: url(../img/selection/apartment-layout/c-g/g4-4.png);
+}
+
+/* 4 этаж - Дом "c-g" */
+.floor-plan .left-house-g .floor-4 .flat-1 {
+	top: 60px;
+	left: 37px;
+}
+
+.floor-plan .left-house-g .floor-4 .flat-1:hover {
+	top: 0;
+	left: 5px;
+	width: 135px;
+	height: 183px;
+	background: url(../img/selection/apartment-layout/c-g/g-4-1-1.png);
+}
+
+.floor-plan .left-house-g .floor-4 .flat-2 {
+	top: 60px;
+	right: 25px;
+}
+
+.floor-plan .left-house-g .floor-4 .flat-2:hover {
+	top: 0;
+	right: 0;
+	width: 124px;
+	height: 179px;
+	background: url(../img/selection/apartment-layout/c-g/g-4-1-2.png);
+}
+
+/* ====== Дом "c-v" ====== */
+
+.floor-plan .left-house-v .floors .flat-1 {
+	top: 30px;
+	left: 70px;
+}
+
+.floor-plan .left-house-v .floors .flat-1:hover {
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 101px;
+	background: url(../img/selection/apartment-layout/c-v/v1-1.png);
+}
+
+.floor-plan .left-house-v .floors .flat-2 {
+	top: 40px;
+	right: 70px;
+}
+
+.floor-plan .left-house-v .floors .flat-2:hover {
+	top: 0;
+	right: 0;
+	width: 149px;
+	height: 228px;
+	background: url(../img/selection/apartment-layout/c-v/v2-2.png);
+}
+
+.floor-plan .left-house-v .floors .flat-3 {
+	bottom: 35px;
+	right: 115px;
+}
+
+.floor-plan .left-house-v .floors .flat-3:hover {
+	bottom: 5px;
+	right: 55px;
+	width: 145px;
+	height: 118px;
+	background: url(../img/selection/apartment-layout/c-v/v3-3.png);
+}
+
+.floor-plan .left-house-v .floors .flat-4 {
+	bottom: 40px;
+	left: 70px;
+}
+
+.floor-plan .left-house-v .floors .flat-4:hover {
+	bottom: 5px;
+	left: 0;
+	width: 150px;
+	height: 118px;
+	background: url(../img/selection/apartment-layout/c-v/v4-4.png);
+}
+
+/* 4 этаж - Дом "c-g" */
+.floor-plan .left-house-v .floor-4 .flat-1 {
+	top: 30px;
+	left: 70px;
+}
+
+.floor-plan .left-house-v .floor-4 .flat-1:hover {
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 101px;
+	background: url(../img/selection/apartment-layout/c-v/v-4-1-1.png);
+}
+
+.floor-plan .left-house-v .floor-4 .flat-2 {
+	top: 40px;
+	right: 70px;
+}
+
+.floor-plan .left-house-v .floor-4 .flat-2:hover {
+	top: 0;
+	right: 0;
+	width: 150px;
+	height: 154px;
+	background: url(../img/selection/apartment-layout/c-v/v-4-2-2.png);
+}
+
+/* ====== Дом "в" ====== */
+
+.floor-plan .right-house-v .floors .flat-1 {
+	top: 51px;
+	left: 57px;
+}
+
+.floor-plan .right-house-v .floors .flat-1:hover {
+	top: 0;
+	left: 0;
+	width: 145px;
+	height: 137px;
+	background: url(../img/selection/apartment-layout/v/v1-1.png);
+}
+
+.floor-plan .right-house-v .floors .flat-2 {
+	top: 50px;
+	left: 170px;
+}
+
+.floor-plan .right-house-v .floors .flat-2:hover {
+	top: 0;
+	left: 145px;
+	width: 80px;
+	height: 124px;
+	background: url(../img/selection/apartment-layout/v/v2-2.png);
+}
+
+.floor-plan .right-house-v .floors .flat-3 {
+	top: 50px;
+	right: 55px;
+}
+
+.floor-plan .right-house-v .floors .flat-3:hover {
+	top: 0;
+	right: 0;
+	width: 125px;
+	height: 130px;
+	background: url(../img/selection/apartment-layout/v/v3-3.png);
+}
+
+.floor-plan .right-house-v .floors .flat-4 {
+	bottom: 70px;
+	right: 35px;
+}
+
+.floor-plan .right-house-v .floors .flat-4:hover {
+	bottom: 0;
+	right: 0;
+	width: 82px;
+	height: 136px;
+	background: url(../img/selection/apartment-layout/v/v4-4.png);
+}
+
+.floor-plan .right-house-v .floors .flat-5 {
+	bottom: 55px;
+	left: 195px;
+}
+
+.floor-plan .right-house-v .floors .flat-5:hover {
+	bottom: 3px;
+	left: 145px;
+	width: 123px;
+	height: 123px;
+	background: url(../img/selection/apartment-layout/v/v5-5.png);
+}
+
+.floor-plan .right-house-v .floors .flat-6 {
+	bottom: 60px;
+	left: 35px;
+}
+
+.floor-plan .right-house-v .floors .flat-6:hover {
+	bottom: 2px;
+	left: 0;
+	width: 86px;
+	height: 129px;
+	background: url(../img/selection/apartment-layout/v/v6-6.png);
+}
+
+/* ====== Дом "г" ====== */
+
+.floor-plan .right-house-g .floors .flat-1 {
+	top: 110px;
+	left: 35px;
+}
+
+.floor-plan .right-house-g .floors .flat-1:hover {
+	top: 5px;
+	left: 0;
+	width: 121px;
+	height: 238px;
+	background: url(../img/selection/apartment-layout/g/g1-1.png);
+}
+
+.floor-plan .right-house-g .floors .flat-2 {
+	top: 50px;
+	left: 125px;
+}
+
+.floor-plan .right-house-g .floors .flat-2:hover {
+	top: 0;
+	left: 82px;
+	width: 105px;
+	height: 156px;
+	background: url(../img/selection/apartment-layout/g/g2-2.png);
+}
+
+.floor-plan .right-house-g .floors .flat-3 {
+	top: 55px;
+	right: 100px;
+}
+
+.floor-plan .right-house-g .floors .flat-3:hover {
+	top: 5px;
+	right: 5px;
+	width: 192px;
+	height: 150px;
+	background: url(../img/selection/apartment-layout/g/g3-3.png);
+}
+
+.floor-plan .right-house-g .floors .flat-4 {
+	top: 120px;
+	right: 50px;
+}
+
+.floor-plan .right-house-g .floors .flat-4:hover {
+	top: 96px;
+	right: 5px;
+	width: 149px;
+	height: 100px;
+	background: url(../img/selection/apartment-layout/g/g4-4.png);
+}
+
+.floor-plan .right-house-g .floors .flat-5 {
+	bottom: 135px;
+	right: 45px;
+}
+
+.floor-plan .right-house-g .floors .flat-5:hover {
+	bottom: 92px;
+	right: 0;
+	width: 124px;
+	height: 107px;
+	background: url(../img/selection/apartment-layout/g/g5-5.png);
+}
+
+.floor-plan .right-house-g .floors .flat-6 {
+	bottom: 40px;
+	right: 115px;
+}
+
+.floor-plan .right-house-g .floors .flat-6:hover {
+	bottom: 2px;
+	right: 5px;
+	width: 237px;
+	height: 142px;
+	background: url(../img/selection/apartment-layout/g/g6-6.png);
+}
+
+/* ====== Дом "д" ====== */
+
+.floor-plan .right-house-d .floors .flat-1 {
+	top: 50px;
+	left: 100px;
+}
+
+.floor-plan .right-house-d .floors .flat-1:hover {
+	top: 0;
+	left: 0;
+	width: 198px;
+	height: 179px;
+	background: url(../img/selection/apartment-layout/d/d1-1.png);
+}
+
+.floor-plan .right-house-d .floors .flat-2 {
+	top: 40px;
+	left: 210px;
+}
+
+.floor-plan .right-house-d .floors .flat-2:hover {
+	top: 0;
+	left: 165px;
+	width: 103px;
+	height: 150px;
+	background: url(../img/selection/apartment-layout/d/d2-2.png);
+}
+
+.floor-plan .right-house-d .floors .flat-3 {
+	top: 115px;
+	right: 40px;
+}
+
+.floor-plan .right-house-d .floors .flat-3:hover {
+	top: 0;
+	right: 0;
+	width: 121px;
+	height: 243px;
+	background: url(../img/selection/apartment-layout/d/d3-3.png);
+}
+
+.floor-plan .right-house-d .floors .flat-4 {
+	bottom: 42px;
+	left: 112px;
+}
+
+.floor-plan .right-house-d .floors .flat-4:hover {
+	bottom: 2px;
+	left: 2px;
+	width: 240px;
+	height: 141px;
+	background: url(../img/selection/apartment-layout/d/d4-4.png);
+}
+
+.floor-plan .right-house-d .floors .flat-5 {
+	bottom: 135px;
+	left: 50px;
+}
+
+.floor-plan .right-house-d .floors .flat-5:hover {
+	bottom: 92px;
+	left: 0;
+	width: 153px;
+	height: 104px;
+	background: url(../img/selection/apartment-layout/d/d5-5.png);
+}
+
+.floor-plan .right-house-d .floors .flat-6 {
+	top: 120px;
+	left: 60px;
+}
+
+.floor-plan .right-house-d .floors .flat-6:hover {
+	top: 97px;
+	left: 0;
+	width: 172px;
+	height: 100px;
+	background: url(../img/selection/apartment-layout/d/d6-6.png);
+}
+
+/* ====== Дом "е" ====== */
+
+.floor-plan .right-house-e .floors .flat-1 {
+	top: 50px;
+	left: 35px;
+}
+
+.floor-plan .right-house-e .floors .flat-1:hover {
+	top: 0;
+	left: 0;
+	width: 125px;
+	height: 125px;
+	background: url(../img/selection/apartment-layout/e/e1-1.png);
+}
+
+.floor-plan .right-house-e .floors .flat-2 {
+	top: 35px;
+	left: 135px;
+}
+
+.floor-plan .right-house-e .floors .flat-2:hover {
+	top: 0;
+	left: 82px;
+	width: 123px;
+	height: 125px;
+	background: url(../img/selection/apartment-layout/e/e2-2.png);
+}
+
+.floor-plan .right-house-e .floors .flat-3 {
+	top: 51px;
+	right: 57px;
+}
+
+.floor-plan .right-house-e .floors .flat-3:hover {
+	top: 0;
+	right: 0;
+	width: 145px;
+	height: 125px;
+	background: url(../img/selection/apartment-layout/e/e3-3.png);
+}
+
+.floor-plan .right-house-e .floors .flat-4 {
+	bottom: 70px;
+	right: 35px;
+}
+
+.floor-plan .right-house-e .floors .flat-4:hover {
+	bottom: 3px;
+	right: 0;
+	width: 84px;
+	height: 142px;
+	background: url(../img/selection/apartment-layout/e/e4-4.png);
+}
+
+.floor-plan .right-house-e .floors .flat-5 {
+	bottom: 60px;
+	left: 135px;
+}
+
+.floor-plan .right-house-e .floors .flat-5:hover {
+	bottom: 3px;
+	left: 82px;
+	width: 123px;
+	height: 123px;
+	background: url(../img/selection/apartment-layout/e/e5-5.png);
+}
+
+.floor-plan .right-house-e .floors .flat-6 {
+	bottom: 75px;
+	left: 33px;
+}
+
+.floor-plan .right-house-e .floors .flat-6:hover {
+	bottom: 4px;
+	left: 0;
+	width: 82px;
+	height: 142px;
+	background: url(../img/selection/apartment-layout/e/e6-6.png);
+}
+
+/* ====== Дом "б1" ====== */
+
+.floor-plan .right-house-b1 .floors .flat-1 {
+	bottom: 123px;
+	left: 55px;
+}
+
+.floor-plan .right-house-b1 .floors .flat-1:hover {
+	bottom: 0;
+	left: 0;
+	width: 109px;
+	height: 255px;
+	background: url(../img/selection/apartment-layout/b1/b1-1.png);
+}
+
+.floor-plan .right-house-b1 .floors .flat-2 {
+	top: 150px;
+	right: 90px;
+}
+
+.floor-plan .right-house-b1 .floors .flat-2:hover {
+	top: 0;
+	right: 0;
+	width: 201px;
+	height: 269px;
+	background: url(../img/selection/apartment-layout/b1/b2-2.png);
+}
+
+.floor-plan .right-house-b1 .floors .flat-3 {
+	bottom: 60px;
+	right: 165px;
+}
+
+.floor-plan .right-house-b1 .floors .flat-3:hover {
+	bottom: 2px;
+	right: 87px;
+	width: 153px;
+	height: 149px;
+	background: url(../img/selection/apartment-layout/b1/b3-3.png);
+}
+
+/* ====== Дом "б2" ====== */
+
+.floor-plan .right-house-b2 .floors .flat-1 {
+	top: 50px;
+	left: 35px;
+}
+
+.floor-plan .right-house-b2 .floors .flat-1:hover {
+	top: 0;
+	left: 0;
+	width: 107px;
+	height: 165px;
+	background: url(../img/selection/apartment-layout/b2/bb1-1.png);
+}
+
+.floor-plan .right-house-b2 .floors .flat-2 {
+	top: 30px;
+	left: 130px;
+}
+
+.floor-plan .right-house-b2 .floors .flat-2:hover {
+	top: 0;
+	left: 105px;
+	width: 72px;
+	height: 71px;
+	background: url(../img/selection/apartment-layout/b2/bb2-2.png);
+}
+
+.floor-plan .right-house-b2 .floors .flat-3 {
+	top: 40px;
+	right: 40px;
+}
+
+.floor-plan .right-house-b2 .floors .flat-3:hover {
+	top: 0;
+	right: 0;
+	width: 106px;
+	height: 177px;
+	background: url(../img/selection/apartment-layout/b2/bb3-3.png);
+}
+
+.floor-plan .right-house-b2 .floors .flat-4 {
+	bottom: 40px;
+	right: 75px;
+}
+
+.floor-plan .right-house-b2 .floors .flat-4:hover {
+	bottom: 3px;
+	right: 35px;
+	width: 103px;
+	height: 86px;
+	background: url(../img/selection/apartment-layout/b2/bb4-4.png);
+}
+
+.floor-plan .right-house-b2 .floors .flat-5 {
+	bottom: 40px;
+	left: 150px;
+}
+
+.floor-plan .right-house-b2 .floors .flat-5:hover {
+	bottom: 3px;
+	left: 108px;
+	width: 105px;
+	height: 85px;
+	background: url(../img/selection/apartment-layout/b2/bb5-5.png);
+}
+
+.floor-plan .right-house-b2 .floors .flat-6 {
+	bottom: 35px;
+	left: 65px;
+}
+
+.floor-plan .right-house-b2 .floors .flat-6:hover {
+	bottom: 3px;
+	left: 38px;
+	width: 69px;
+	height: 86px;
+	background: url(../img/selection/apartment-layout/b2/bb6-6.png);
+}
+
+/* =========================== Планировка квартиры =========================== */
+
+.plan .flat-plan .flat {
+	display: none;
+}
+
+.plan .flat-plan .show {
+	display: inline-block;
+}
+
+.plan .flat-plan .flat-options {
+	position: relative;
+	width: 200px;
+	margin: 25px auto;
+	padding: 15px;
+	line-height: 1.6em;
+	color: #787878;
+	background-color: #f2f2f2;
+}
+
+.plan .flat-plan .flat-options::before {
+	content: '';
+	position: absolute;
+	top: -40px;
+	left: 50%;
+	width: 0;
+	height: 0;
+	margin-left: -20px;
+	border: 20px solid transparent;
+	border-bottom-color: #f2f2f2;
+}
+
+.plan .flat-options .button {
+	display: block;
+	margin-top: 10px;
+	padding: 10px 20px;
+	text-align: center;
+	color: #ffffff;
+	text-decoration: none;
+	background: linear-gradient(to bottom, #98b525, #739000);
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.plan .flat-options .button:hover {
+	background: linear-gradient(to bottom, #a0c312, #a0c312);
+}
+
+.plan .flat-options .title {
+	color: #d94345;
+}
+
+.plan .flat-options b {
+	color: #000000;
+}
+
+/* ====================== Футер ====================== */
+footer {
+	position: relative;
+	min-height: 150px;
+	background-color: #49484d;
+}
+
+footer::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -6px;
+	left: 0;
+	width: 100%;
+	height: 6px;
+	background: linear-gradient(-45deg, #49484d 4px, transparent 0), linear-gradient(45deg, #49484d 4px, transparent 0) repeat-x;
+	background-size: 6px 6px;
+}
+
+.navbar-footer {
+	padding-top: 10px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 2px solid #5c5b61;
+}
+
+footer .phone {
+	color: #ffffff;
+}
+
+footer .feedback .callback {
+	color: #42a9eb;
+}
